@@ -30,7 +30,8 @@ namespace Supplement_P1_7
 
         public (double average, int min, int max) ReturnAvgMinMax()
         {
-            throw new NotImplementedException();
+            int[] array3 = Enumerable.Range(0, 1_000_000).ToArray();
+            return (array3.Average(), array3.Min(), array3.Max());
         }
     }
 }
