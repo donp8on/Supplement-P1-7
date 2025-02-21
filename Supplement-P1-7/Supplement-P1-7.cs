@@ -27,7 +27,10 @@ namespace Supplement_P1_7
             return shuffle.Where(n => n % 2 != 0).Skip(skip).ToArray();
         }
 
-
+        /// <summary>
+        /// Method to return the average, minimum, and maximum of the array.
+        /// </summary>
+        /// <returns>Returns the average, min, and max of an array of numbers from 0 to 1,000,000.</returns>
         public (double average, int min, int max) ReturnAvgMinMax()
         {
             int[] array3 = Enumerable.Range(0, 1_000_000).ToArray();
