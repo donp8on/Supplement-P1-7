@@ -18,7 +18,9 @@ namespace Supplement_P1_7
 
         public int[] ShuffleAndReturnOddNumbers(int skip = 0)
         {
-            throw new NotImplementedException();
+            int[] array2 = Enumerable.Range(0, 1_000_000).ToArray();
+            var shuffle = array2.OrderBy(_ => Guid.NewGuid()).ToArray();
+            return shuffle.Where(n => n % 2 != 0).Skip(skip).ToArray();
         }
 
 
