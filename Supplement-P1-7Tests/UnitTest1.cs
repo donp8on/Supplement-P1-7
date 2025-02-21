@@ -14,5 +14,18 @@ namespace Supplement_P1_7Tests
 
             Assert.Equal(skipCount * 2, result.First());
         }
+
+        [Fact]
+        public void ShouldShuffleAndReturnOddNumbers()
+        {
+            var result1 = operations.ShuffleAndReturnOddNumbers();
+            var result2 = operations.ShuffleAndReturnOddNumbers();
+
+            Assert.All(result1, num => Assert.True(num % 2 != 0));
+
+            Assert.Equal(500_000, result1.Length);
+
+            Assert.NotEqual(result1, result2);
+        }
     }
 }
