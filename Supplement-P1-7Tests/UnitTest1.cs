@@ -27,5 +27,15 @@ namespace Supplement_P1_7Tests
 
             Assert.NotEqual(result1, result2);
         }
+
+        [Fact]
+        public void ShouldReturnAvgMinMax()
+        {
+            var (avg, min, max) = operations.ReturnAvgMinMax(); 
+
+            Assert.Equal(499999.5, avg, 1);
+            Assert.Equal(0, min);
+            Assert.Equal(999999, max);
+        }
     }
 }
