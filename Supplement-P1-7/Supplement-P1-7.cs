@@ -15,7 +15,11 @@ namespace Supplement_P1_7
             return array1.Where(n => n % 2 == 0).Skip(skip).ToArray();
         }
 
-
+        /// <summary>
+        /// Willshuffle the elements of the array, and then return all odd numbers in the array.
+        /// </summary>
+        /// <param name="skip">This is the optional skip parameter.</param>
+        /// <returns>Should return shuffled odd numbers from array.</returns>
         public int[] ShuffleAndReturnOddNumbers(int skip = 0)
         {
             int[] array2 = Enumerable.Range(0, 1_000_000).ToArray();
