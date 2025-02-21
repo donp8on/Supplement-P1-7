@@ -6,7 +6,8 @@ namespace Supplement_P1_7
     {
         public int[] ReturnEvenNumbers(int skip = 0)
         {
-            throw new NotImplementedException();
+            int[] array1 = Enumerable.Range(0, 1_000_000).ToArray();
+            return array1.Where(n => n % 2 == 0).Skip(skip).ToArray();
         }
 
 
